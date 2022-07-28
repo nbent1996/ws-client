@@ -15,12 +15,12 @@ public class Main {
     }
     private static void consumirWebService() {
         try {
-            String endpointUrl = "http://localhost:9080/WS-/CalculatorEXTService/CalculatorEXTBean?wsdl";
+            String endpointUrl = "http://localhost:8087/webServices-1.0/Calculator/Calculator?wsdl
 
-            QName serviceName = new QName("http://Stateless/",
-                    "CalculatorEXTService");
-            QName portName = new QName("http://Stateless/",
-                    "CalculatorEXTBeanPort");
+            QName serviceName = new QName("http://ws/",
+                    "Calculator");
+            QName portName = new QName("http://ws/",
+                    "calculator");
 
 /** Create a service and add at least one port to it. **/
 
@@ -47,7 +47,7 @@ public class Main {
 
 // Construct the message payload.
             SOAPElement operation = body.addChildElement("multiplicacion", "ns1",
-                    "http://Stateless/");
+                    "http://ws/");
             SOAPElement value1 = operation.addChildElement("arg0");
             SOAPElement value2 = operation.addChildElement("arg1");
             value1.addTextNode("25");
