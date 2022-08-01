@@ -15,7 +15,7 @@ public class Main {
     }
     private static void consumirWebService() {
         try {
-            String endpointUrl = "http://localhost:8087/webServices-1.0/Calculator/Calculator?wsdl
+            String endpointUrl = "http://localhost:8087/webServices-1.0/Calculator/Calculator?wsdl";
 
             QName serviceName = new QName("http://ws/",
                     "Calculator");
